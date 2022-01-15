@@ -19,7 +19,7 @@ export default function Game(){
         evolve,
     } = useHabitatState(
         buildHabitat(
-            50,20,
+            20,20,
             [{x:1,y:2},{x:1,y:3},{x:1,y:4}]
         )
     );
