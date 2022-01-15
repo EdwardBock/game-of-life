@@ -1,0 +1,13 @@
+
+.cell {
+    width: var(--cell-size);
+    height: var(--cell-size);
+}
+
+.dead {
+    background: var(--color-dead);
+}
+
+.life {
+    background: var(--color-alive);
+}

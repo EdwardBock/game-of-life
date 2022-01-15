@@ -1,0 +1,12 @@
+.root {
+
+    display: inline-block;
+    overflow: hidden;
+
+    border-radius: var(--border-radius);
+    border: 1px solid var(--material-color-grey-200);
+}
+
+.row {
+    display: flex;
+}
