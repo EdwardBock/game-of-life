@@ -1,4 +1,5 @@
 import {buildHabitat, countSurroundingLife, evolve} from "../utils/habitat";
+import {isAlive} from "../utils/cell";
 
 describe("Count cell life surroundings", ()=>{
     it('Should be surrounded by none', ()=>{
@@ -71,7 +72,7 @@ describe("Habitat evolution", ()=>{
         const evolved = evolve(habitatState);
         evolved.forEach(row => {
             row.forEach(cell => {
-                expect(cell.alive).toBeFalsy();
+                expect(isAlive(cell)).toBeFalsy();
             })
         })
     });

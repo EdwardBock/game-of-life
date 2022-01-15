@@ -1,11 +1,11 @@
-import {Cell} from "types";
 import CellField from "components/CellField";
+import {HabitatState} from "types";
 
 import styles from './Habitat.module.css';
 
 
 type HabitatProps = {
-    data: Cell[][]
+    data: HabitatState
     onCellClick: (x: number, y: number) => void
 }
 
@@ -14,10 +14,11 @@ export default function Habitat(
 ) {
     return <div className={styles.root}>
         {data.map((row, y) => {
-            return <div className={styles.row}>
+            return <div key={y} className={styles.row}>
                 {row.map((cell, x) => {
                     return <CellField
-                        alive={cell.alive}
+                        key={x}
+                        alive={cell == 1}
                         onClick={()=> onCellClick(x,y)}
                     />
                 })}
